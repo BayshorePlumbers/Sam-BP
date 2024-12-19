@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://polyfill.io https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <title>SALES POTENTIAL COMMISSION CALCULATOR - BAYSHORE PLUMBERS</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+    <div class="container">
+        <h1>SALES POTENTIAL COMMISSION CALCULATOR - BAYSHORE PLUMBERS</h1>
+        <div class="logo-container">
+            <img src="BP.png" alt="BP Logo" class="logo" style="max-width: 200px;">
+        </div>
+        <div class="calculator">
+            <form id="commissionForm">
+                <div class="row">
+                    <div class="column">
+                        <label for="tn">NAME:</label>
+                        <input type="text" id="tn" name="tn" placeholder="Enter your name here">
+                        <label for="tp">TOTAL PRICE:</label>
+                        <input type="number" id="tp" name="tp" placeholder="Enter the final selling price of the job" min="0">
+                    </div>
+                    <div class="column">
+                        <label for="ja">JOB ADDRESS:</label>
+                        <input type="text" id="ja" name="ja" placeholder="Enter job address here">
+                        <label for="date">DATE:</label>
+                        <input type="date" id="date" name="date" placeholder="Enter Date">
+                    </div>
+                </div>
+
+                <label for="job">SALE DETAILS</label>
+                <select id="job" name="job">
+                    <option value="Follow up & Close - From Day 8 to Day 21">Follow up & Close - From Day 8 to Day 21</option>
+                    <option value="Follow up & Close - After Day 21">Follow up & Close - After Day 21</option>
+                    <option value="Billable Hours/ Job Sold">Billable Hours/ Job Sold</option>
+                    <option value="Outreach Effort">Outreach Effort</option>
+                </select>
+
+                <div class="row notes-section">
+                    <h5>JOB EXPLANATION & NOTES:</h5>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Enter Notes Here"></textarea>
+                </div>
+
+                <div class="output-group">
+                    <p>Commission: <span id="baseCommission">0.00</span></p>
+                </div>
+                <div class="row button-container">
+                    <button type="button" id="calculateBtn">Calculate Potential Commission</button>
+                    <button type="button" id="printButton">Print</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="techcomsalesscript.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <title>OPERATIONS PROJECT REPORT - BAYSHORE PLUMBERS</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Project Report - Bayshore Plumbers</h1>
+        <div class="logo-container">
+            <img src="BP.png" alt="BP" class="logo" style="max-width: 200px;">
+        </div>
+        <div class="calculator">
+<form>
+                <div class="row">
+                    <div class="column">
+                        <label for="ja">JOB ADDRESS:</label>
+                        <input type="text" id="ja" name="ja" placeholder="Enter job address here">
+                        <label for="tp">TOTAL PRICE:</label>
+                        <input type="number" id="tp" name="tp" placeholder="Enter the final selling price of the job" min="0">
+                        <label for="pd">PROJECT DURATION:</label>
+                        <input type="number" id="pd" name="pd" placeholder="Enter Final Project Duration" min="0">
+                    </div>
+                    <div class="column">
+                        <label for="material">MATERIAL EXPENSES:</label>
+                        <input type="number" id="material" name="material" placeholder="Enter Estimated MATERIAL EXPENSES" min="0">
+                        <label for="oe">OTHER EXPENSE:</label>
+                        <input type="number" id="oe" name="oe" placeholder="Enter Other Expenses">
+                        <label for="date">DATE:</label>
+                        <input type="date" id="date" name="date" placeholder="Enter Date">
+                    </div>
+                </div>
+
+                <div class="row labor-details-row">
+                    <h5>LABOR DETAILS</h5>
+                    <div class="column">
+                        <label for="day1">DAY 1:</label>
+                        <input type="number" id="day1" name="day1" min="0">
+                        <label for="day2">DAY 2:</label>
+                        <input type="number" id="day2" name="day2" min="0">
+                        <label for="day3">DAY 3:</label>
+                        <input type="number" id="day3" name="day3" min="0">
+                        <label for="day4">DAY 4:</label>
+                        <input type="number" id="day4" name="day4" min="0">
+                    </div>
+                    <div class="column">
+                        <label for="day5">DAY 5:</label>
+                        <input type="number" id="day5" name="day5" min="0">
+                        <label for="ah">Additional Hours:</label>
+                        <input type="number" id="ah" name="ah" min="0">
+                        <label for="toh">Total Overtime Hours:</label>
+                        <input type="number" id="toh" name="toh" min="0">
+                        <label for="totalHours">Total Hours:</label>
+                        <input type="number" id="totalHours" name="totalHours" readonly>
+                    </div>
+                </div>
+                
+                <div class="row notes-section">
+                    <h5>JOB DESCRIPTION:</h5>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Enter Notes Here"></textarea>
+                </div>
+
+                <!-- For Office Use Only Section -->
+                <div class="row">
+                    <div class="column">
+                        <h5>FOR OFFICE USE ONLY</h5>
+                    </div>
+                </div>
+                <div class="row office-use-section">
+                    <div class="column">
+                        <label for="sw">SW21/RP21:</label>
+                        <input type="text" id="sw" name="sw" readonly>
+                    </div>
+                    <div class="column">
+                        <label for="wh">WH32:</label>
+                        <input type="text" id="wh" name="wh" readonly>
+                    </div>
+                    <div class="column">
+                        <label for="rd">RD15/UL15:</label>
+                        <input type="text" id="rd" name="rd" readonly>
+                    </div>
+                    <div class="column">
+                        <label for="bpp">BP%:</label>
+                        <input type="text" id="bpp" name="bpp" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <p id="jobBustMessage" class="job-bust-message"></p> <!-- New element for the message -->
+                </div>                
+                <div class="row button-container">
+                    <button type="button" id="calculateBtn">Generate Report</button>
+                    <button type="button" id="printButton">Print</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="jobreport.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+</body>
+</html>
